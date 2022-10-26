@@ -4,7 +4,7 @@
 *main - Test functions for positive or negative
 *Return: 0
 */
-void positive_or_negative(int i)
+int main (void)
 {
   int i;
   i = 0;
