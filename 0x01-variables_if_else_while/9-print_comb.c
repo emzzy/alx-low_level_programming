@@ -7,16 +7,14 @@
 */
 int main(void)
 {
-int n;
-for (n = 48; n < 58; n++)
+int num;
+for (num = 48; num < 58; num++)
 {
-putchar(n);
-if (n != 57)
-{
-putchar(',');
-putchar(' ');
+putchar(num);
+if (num < 57){
+putchar(44);
+putchar(32);
 }
 }
-putchar('\n');
 return (0);
 }
