@@ -5,7 +5,7 @@
 *numbers must be seperated by comma and a space
 *Returns: zero
 */
-int main()
+int main(void)
 {
 int a, b, c;
 a = 48;
