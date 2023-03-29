@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
-*main- prints all possible different combinations of three digits
-*numbers must be seperated by comma and a space
-*Returns: zero
+*main-prints all possible different combinations of three digits
+*followed by a space
+*Return: 0 if successful
 */
 int main(void)
 {
