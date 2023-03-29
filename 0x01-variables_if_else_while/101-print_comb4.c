@@ -8,14 +8,14 @@
 int main()
 {
   int a, b, c;
-  a = 0;
-  b = 0;
-  c = 0;
+  a = 48;
+  b = 48;
+  c = 48;
   for (a = 48; a < 58; a++)
     {
-      for (b = 0; b < 58; b++)
+      for (b = 48; b < 58; b++)
 	{
-	  for (c = 0; c < 58; c++)
+	  for (c = 48; c < 58; c++)
 	    {
 	      if (a != b && a < b)
 		{
