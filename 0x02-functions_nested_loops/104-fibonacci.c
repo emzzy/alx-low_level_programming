@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define LARGEST 10000000000
 
 /**
 *main-find and prints the first 98 fibonacci numbers
@@ -9,28 +10,29 @@
 */
 int main(void)
 {
-unsigned long int i, j, k, j1, j2, k1, k2;
-j = 1;
-k = 2;
-printf("%lu", j);
-for (i = 1; i < 91; i++)
+unsigned long int fr1 = 0, bk1 = 1, fr2 = 0, bk2 = 2;
+unsigned long int hold1, hold2, hold3;
+int count;
+printf("%lu, %lu, ", bk1, bk2);
+for (count = 2; count < 98; count++)
 {
-printf(", %lu", k);
-k = k + j;
-j = k - j;
+if (bk1 + bk2 > LARGEST || fr2 > 0 || fr1 > 0)
+{
+hold1 = (bk1 + bk2) / LARGEST;
+hold2 = (bk1 + bk2) % LARGEST;
+hold3 = fr1 + fr2 + hold1;
+fr1 = fr2, fr2 = hold3;
+bk1 = bk2, bk2 = hold2;
+printf("%lu%010lu", fr2, bk2);
 }
-j1 = j / 1000000000;
-j2 = j % 1000000000;
-k1 = k / 1000000000;
-k2 = k % 1000000000;
-for (i = 92; i < 99; ++i)
+else
 {
-printf(", %lu", k1 + (k2 / 1000000000));
-printf("%lu", k2 % 100000000);
-k1 = k1 + j1;
-j1 = k1 - j1;
-k2 = k2 + j2;
-j2 = k2 - j2;
+hold2 = bk1 + bk2;
+bk1 = bk2, bk2 = hold2;
+printf("%lu", bk2);
+}
+if (count != 97)
+printf(", ");
 }
 printf("\n");
 return (0);
