@@ -7,15 +7,12 @@
 */
 int main(void)
 {
-char ch = 'a';
-while (ch <= 'z')
+char alpha = 'a';
+for (alpha = 'a'; alpha <= 'z'; alpha++)
 {
-if (ch != 'e' &&  ch != 'q')
-{
-putchar(ch);
+if (alpha == 'q' || alpha == 'e')
+alpha++;
+putchar(alpha);
 }
-ch++;
-}
-putchar('\n');
 return (0);
 }
